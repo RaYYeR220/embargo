@@ -5,28 +5,12 @@
 *.pem
 *.key
 
-# working notes (never published)
-BRIEF.md
-SHIP-STATE.md
-ALTERNATIVES.md
-submission*.md
-.remember/
-MEMORY.md
-superpowers/
-docs/superpowers/
-.agents/
-.claude/
-*-internal/
-*-backup*
-*.bundle
+# scratch / working files (never published)
 scratch/
 notes/
-
-# design prototypes
-ui-prototypes/
-mockups/
-design-ref/
-variants/
+*-backup*
+*.bundle
+*.log
 
 # build + runtime
 node_modules/
@@ -38,7 +22,11 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 coverage/
-bench/runs/*/raw/
 work/
-*.log
 bench/cache/
+
+# design prototypes (only the final UI ships)
+ui-prototypes/
+mockups/
+design-ref/
+variants/
