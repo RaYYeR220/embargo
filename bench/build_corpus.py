@@ -39,6 +39,8 @@ def _affected(entry: dict) -> dict:
     pairs: list[dict] = []
     for aff in entry.get("affected", []):
         for rng in aff.get("ranges", []):
+            if rng.get("type") != "SEMVER":
+                continue  # GIT ranges carry commit hashes, not versions
             cur: dict = {}
             for ev in rng.get("events", []):
                 if "introduced" in ev:
