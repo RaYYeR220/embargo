@@ -1,0 +1,51 @@
+{
+  "corpus": "bench\\corpus\\manifest.json",
+  "latest_curl": "8.23.0",
+  "minutes_per_report": 30,
+  "items": 227,
+  "by_kind": {
+    "real-cve": 89,
+    "patched-twin": 89,
+    "maintainer-slop": 49
+  },
+  "baseline_text": {
+    "n": 227,
+    "reals": 89,
+    "invalids": 138,
+    "true_real": 74,
+    "false_real": 117,
+    "caught_invalid": 0,
+    "missed_real": 0,
+    "escalated_real": 15,
+    "escalated_invalid": 21,
+    "false_accept_rate": 0.8478,
+    "recall_on_real": 0.8315,
+    "precision_on_real": 0.3874,
+    "auto_dispositioned_invalid": 0,
+    "maintainer_minutes_saved": 0
+  },
+  "desk_grounded": {
+    "n": 227,
+    "reals": 89,
+    "invalids": 138,
+    "true_real": 89,
+    "false_real": 20,
+    "caught_invalid": 53,
+    "missed_real": 0,
+    "escalated_real": 0,
+    "escalated_invalid": 65,
+    "false_accept_rate": 0.1449,
+    "recall_on_real": 1.0,
+    "precision_on_real": 0.8165,
+    "auto_dispositioned_invalid": 53,
+    "maintainer_minutes_saved": 1590
+  },
+  "headline": {
+    "false_accept_rate_text": 0.8478,
+    "false_accept_rate_desk": 0.1449,
+    "recall_text": 0.8315,
+    "recall_desk": 1.0,
+    "minutes_saved_text": 0,
+    "minutes_saved_desk": 1590
+  }
+}

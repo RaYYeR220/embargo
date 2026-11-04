@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Embargo — live console</title>
+<meta name="description" content="Open embargoes and the guard's live allow/block decisions, straight from Switch's message path." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0b0d11;--line:rgba(255,255,255,.10);--fg:#eef1f3;--mut:#9aa3ad;--dim:#6b747d;
+    --mint:#5fe3b0;--mint-dim:#2a6f57;--block:#f07a68;--ok:#5fe3b0;
+    --disp:"Space Grotesk",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--fg);font-family:var(--disp)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+  .brand{display:flex;gap:10px;align-items:center;font-weight:600;letter-spacing:-.02em}
+  .brand .dot{width:11px;height:11px;border-radius:3px;background:var(--mint);box-shadow:0 0 16px var(--mint-dim)}
+  nav a{color:var(--mut);text-decoration:none;font-size:14px}
+  nav a:hover{color:var(--fg)}
+  .head{padding:40px 0 10px}
+  h1{font-size:clamp(28px,4vw,44px);letter-spacing:-.04em;font-weight:600;margin:0 0 8px}
+  .sub{color:var(--mut);max-width:64ch;margin:0}
+  .src{font-family:var(--mono);font-size:12px;margin-top:14px;color:var(--dim)}
+  .src b{color:var(--mint)}
+  .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px;padding:26px 0 60px}
+  .grid>*{min-width:0}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{border:1px solid var(--line);border-radius:16px;padding:22px;background:linear-gradient(180deg,#ffffff06,transparent)}
+  .card h2{font-size:14px;font-family:var(--mono);color:var(--dim);font-weight:500;margin:0 0 16px;letter-spacing:.02em}
+  .feed{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow:auto}
+  .row{display:flex;gap:12px;align-items:center;font-size:14px;padding:10px 12px;border-radius:10px;background:#ffffff05;border:1px solid transparent;min-width:0}
+  .row .pill{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:999px;flex:none}
+  .row.blocked{border-color:rgba(240,122,104,.3)} .row.blocked .pill{background:rgba(240,122,104,.15);color:var(--block)}
+  .row.ok .pill{background:rgba(95,227,176,.13);color:var(--ok)}
+  .row .rm{font-family:var(--mono);font-size:12px;color:var(--dim);flex:none}
+  .row .txt{color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
+  .case{display:flex;justify-content:space-between;align-items:center;padding:12px;border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
+  .case .id{font-family:var(--mono);font-size:13px;color:var(--fg)}
+  .case .meta{font-family:var(--mono);font-size:11px;color:var(--dim)}
+  .case .state{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:999px;background:rgba(95,227,176,.13);color:var(--mint)}
+  .nums{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+  .stat{border:1px solid var(--line);border-radius:12px;padding:16px}
+  .stat .n{font-family:var(--mono);font-size:26px;color:var(--mint)} .stat .n.bad{color:var(--block)}
+  .stat .l{color:var(--mut);font-size:13px;margin-top:4px}
+  footer{padding:26px 0 60px;color:var(--dim);font-size:13px;border-top:1px solid var(--line)}
+  footer a{color:var(--mut)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="brand"><span class="dot"></span> Embargo · console</div>
+    <div><a href="index.html">← home</a></div>
+  </nav>
+  <div class="head">
+    <h1>What the guard is doing</h1>
+    <p class="sub">Open embargoes, and the allow/block decisions the guard returns to Switch before every message is sent. This is the enforcement, not a log written after the fact.</p>
+    <p class="src" id="src">connecting to the guard…</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>decision feed — checked before every send</h2>
+      <div class="feed" id="feed"></div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:22px">
+        <h2>open embargoes</h2>
+        <div id="cases"></div>
+      </div>
+      <div class="card">
+        <h2>triage benchmark — grounded vs trusting the text</h2>
+        <div class="nums">
+          <div class="stat"><div class="n" id="deskFA">14%</div><div class="l">invalid accepted — grounded</div></div>
+          <div class="stat"><div class="n bad" id="textFA">85%</div><div class="l">invalid accepted — baseline</div></div>
+          <div class="stat"><div class="n" id="recall">100%</div><div class="l">real reports kept</div></div>
+          <div class="stat"><div class="n" id="mins">~26h</div><div class="l">review auto-saved</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>Reads the guard at <span id="guardurl">http://127.0.0.1:19000</span> when reachable, otherwise a bundled snapshot. · <a href="index.html">home</a></footer>
+</div>
+
+<script>
+const GUARD = new URLSearchParams(location.search).get("guard") || "http://127.0.0.1:19000";
+document.getElementById("guardurl").textContent=GUARD;
+
+async function tryLive(){
+  try{
+    const [c,a]=await Promise.all([
+      fetch(GUARD+"/cases").then(r=>r.json()),
+      fetch(GUARD+"/audit?limit=40").then(r=>r.json()),
+    ]);
+    return {live:true,cases:c.cases||[],audit:a.decisions||[]};
+  }catch(e){ return null; }
+}
+async function snapshot(){
+  try{ const s=await fetch("snapshot.json").then(r=>r.json()); return {live:false,...s}; }
+  catch(e){ return {live:false,cases:[],audit:[]}; }
+}
+async function triage(){
+  try{ return await fetch("triage.json").then(r=>r.json()); }catch(e){ return null; }
+}
+
+function renderFeed(audit){
+  const checks=audit.filter(d=>d.kind==="check");
+  document.getElementById("feed").innerHTML = checks.slice(0,40).map(d=>{
+    const blocked=d.outcome==="blocked";
+    return `<div class="row ${blocked?"blocked":"ok"}">
+      <span class="pill">${blocked?"BLOCKED":"allow"}</span>
+      <span class="rm">${(d.room_id||"").slice(0,8)||"—"}</span>
+      <span class="txt">${(d.preview||"").replace(/</g,"&lt;")||"(empty)"}</span></div>`;
+  }).join("") || `<div class="row ok"><span class="txt">no decisions yet — post a report to the desk</span></div>`;
+}
+function renderCases(cases){
+  document.getElementById("cases").innerHTML = cases.map(c=>`
+    <div class="case"><div><div class="id">${c.case_id}</div>
+    <div class="meta">${(c.secret_count||0)} protected · ${c.allowed_rooms?.length||0} room(s)</div></div>
+    <span class="state">${c.active?"UNDER EMBARGO":"lifted"}</span></div>`).join("")
+    || `<div class="case"><div class="id">no open cases</div><span class="state">idle</span></div>`;
+}
+function renderTriage(t){
+  if(!t) return;
+  const h=t.headline||{};
+  const pct=x=>Math.round((x||0)*100)+"%";
+  if(h.false_accept_rate_desk!=null)document.getElementById("deskFA").textContent=pct(h.false_accept_rate_desk);
+  if(h.false_accept_rate_text!=null)document.getElementById("textFA").textContent=pct(h.false_accept_rate_text);
+  if(h.recall_desk!=null)document.getElementById("recall").textContent=pct(h.recall_desk);
+  if(h.minutes_saved_desk!=null)document.getElementById("mins").textContent="~"+Math.round(h.minutes_saved_desk/60)+"h";
+}
+
+async function refresh(){
+  const data = await tryLive() || await snapshot();
+  document.getElementById("src").innerHTML = data.live
+    ? 'source: <b>live guard</b> — decisions as Switch makes them'
+    : 'source: <b>bundled snapshot</b> — start the stack for live decisions';
+  renderFeed(data.audit); renderCases(data.cases);
+  renderTriage(await triage());
+}
+refresh(); setInterval(refresh, 2500);
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{
+ "cases": [
+  {
+   "case_id": "case-4a4610",
+   "allowed_rooms": [
+    "5e44e508-a4a3-49f5-8724-137a9941f028"
+   ],
+   "secret_count": 1,
+   "embargo_until": "2026-11-18T19:04:38.006346+00:00",
+   "active": true
+  }
+ ],
+ "audit": [
+  {
+   "kind": "check",
+   "room_id": "b323b92c-5576-42ec-9f67-158587ff46e3",
+   "outcome": "blocked",
+   "cases": [
+    "case-4a4610"
+   ],
+   "preview": "the bug is: Use-after-free in libcurl 8.11.0 cookie jar parsing on duplicate Set-Cookie",
+   "at": "2026-11-04T19:04:38.306224+00:00"
+  },
+  {
+   "kind": "check",
+   "room_id": "b323b92c-5576-42ec-9f67-158587ff46e3",
+   "outcome": "ok",
+   "cases": [],
+   "preview": "Opened **case-4a4610** as a private case. No matching advisory and the version predates the newest release; a human shou",
+   "at": "2026-11-04T19:04:38.145890+00:00"
+  },
+  {
+   "kind": "case.upsert",
+   "case_id": "case-4a4610",
+   "allowed_rooms": [
+    "5e44e508-a4a3-49f5-8724-137a9941f028"
+   ],
+   "secret_count": 1,
+   "embargo_until": "2026-11-18T19:04:38.006346+00:00",
+   "at": "2026-11-04T19:04:38.006346+00:00"
+  },
+  {
+   "kind": "check",
+   "room_id": "b323b92c-5576-42ec-9f67-158587ff46e3",
+   "outcome": "ok",
+   "cases": [],
+   "preview": "I am closing this without opening a case. No advisory covers 8.23.0 for this bug class; 8.23.0 is at or past the newest ",
+   "at": "2026-11-04T19:04:37.441865+00:00"
+  }
+ ]
+}

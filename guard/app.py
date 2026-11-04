@@ -38,6 +38,7 @@ from datetime import datetime, timezone
 from typing import Literal
 
 from fastapi import FastAPI, Header, Request
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 Outcome = Literal["ok", "blocked", "redacted", "alerted", "errored"]
@@ -165,6 +166,15 @@ class CaseUpsert(BaseModel):
 
 
 app = FastAPI(title="Embargo guard", version="1.0")
+
+# The live console reads /cases and /audit from a browser. Those are read-only
+# views; the admin routes stay gated by the key regardless of origin.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+    allow_headers=["*"],
+)
 
 
 def _authorised(key: str | None) -> bool:
