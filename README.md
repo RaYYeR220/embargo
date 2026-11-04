@@ -108,9 +108,15 @@ python scripts/seed_desk.py
 ```sh
 # in three shells, with work/desk.env exported:
 python -m desk.agents.intake
-python -m desk.agents.reproducer
+python -m desk.agents.reproducer     # set CLAUDE_REPRODUCER=1 to add a Claude Code read
 python -m desk.agents.disclosure
 ```
+
+Switch runs any agent. The reproducer ships deterministic, and with
+`CLAUDE_REPRODUCER=1` it also hands the grounded evidence and the sandbox output
+to a Claude Code session (via its CLI) for a second, triage-only read posted in
+the case room — the "any agent, any model" that Switch is for. A Claude Code or
+Codex agent can also join a case room directly through Switch Console.
 
 **4. See it work:** post a report in the intake room and address `@embargo-intake`,
 or run the whole path in one go with `python scripts/demo_flow.py`.

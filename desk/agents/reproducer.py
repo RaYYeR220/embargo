@@ -14,11 +14,14 @@ the same seat through Switch and carry a reproduction further.
 
 from __future__ import annotations
 
+import os
 import re
+import shutil
+import subprocess
 
 from desk.config import DeskConfig
 from desk.switch_client import SwitchAgent
-from desk.verifier import VulnIndex
+from desk.verifier import Claim, VulnIndex, classify_text, significant_tokens, verify
 from sandbox.probe import probe
 
 _VER = re.compile(r"(\d+\.\d+(?:\.\d+)?)")
@@ -72,19 +75,53 @@ class ReproducerAgent:
             verdict = "claim-does-not-stand"
         else:
             verdict = "reproduction-environment-ready"
-        self._post(
-            room_id,
+        message = (
             f"@security-lead reproduction attempt for the claim against curl {version}:\n\n"
             f"{result.summary()}\n\n"
             f"Verdict: **{verdict}**. "
             + (
                 "The release or the option the report relies on does not exist, so the "
                 "claim does not stand as written."
-                if verdict == "claim-does-not-stand" or verdict == "could-not-reproduce"
+                if verdict in ("claim-does-not-stand", "could-not-reproduce")
                 else "The release and options exist; a deeper reproduction can proceed here under embargo."
-            ),
+            )
         )
+        # Optionally hand the grounded evidence to a coding agent (Claude Code,
+        # via its CLI) for a second read. It never sees more than the public
+        # advisory grounding and the benign probe output, and is asked only to
+        # triage — not to exploit anything.
+        assessment = self._coding_agent_assessment(version, text, result.summary())
+        if assessment:
+            message += f"\n\n**Claude Code (reproducer) read:** {assessment}"
+        self._post(room_id, message)
         return {"version": version, "verdict": verdict, "summary": result.summary()}
+
+    def _coding_agent_assessment(self, version: str, text: str, probe_summary: str) -> str | None:
+        if os.environ.get("CLAUDE_REPRODUCER") != "1":
+            return None
+        cli = shutil.which("claude")
+        if not cli:
+            return None
+        grounded = verify(
+            Claim("r", text[:90], version, set(classify_text(text))), self.index
+        )
+        prompt = (
+            "You are a triage assistant for an open-source maintainer, in a private "
+            "security case room. Using only the evidence below, say in two sentences "
+            "whether a human maintainer should review this as a plausible case or close "
+            "it, and why. Do not provide or request exploit details.\n\n"
+            f"Reported claim: {text[:300]}\n"
+            f"Sandbox probe of the named release:\n{probe_summary}\n"
+            f"Advisory grounding: {grounded.reason}"
+        )
+        try:
+            out = subprocess.run(
+                [cli, "-p", prompt], capture_output=True, text=True, timeout=120, check=False
+            )
+            reply = (out.stdout or "").strip()
+            return reply[:700] if reply else None
+        except Exception:
+            return None
 
     def _version(self, text: str) -> str:
         m = _VER.search(text or "")
