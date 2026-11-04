@@ -82,8 +82,18 @@ def main() -> None:
         "ADVISORIES_ROOM_ID": advisories["id"],
     }
     (STATE / "desk-rooms.json").write_text(json.dumps(env, indent=2))
+    # An env file the agent containers read (room ids + the static runtime
+    # config). Secrets stay out of the repo; this lives under work/, gitignored.
+    runtime = {
+        "SWITCH_API": API,
+        "REG_TOKEN": REG,
+        "GUARD_URL": os.environ.get("GUARD_URL", "http://guard:19000"),
+        "EMBARGO_ADMIN_KEY": os.environ.get("EMBARGO_ADMIN_KEY", ""),
+        **env,
+    }
+    (STATE / "desk.env").write_text("\n".join(f"{k}={v}" for k, v in runtime.items()) + "\n")
     print(json.dumps(env, indent=2))
-    print(f"-> {STATE / 'desk-rooms.json'}")
+    print(f"-> {STATE / 'desk-rooms.json'} and {STATE / 'desk.env'}")
 
 
 if __name__ == "__main__":

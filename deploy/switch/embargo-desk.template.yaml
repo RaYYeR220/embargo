@@ -1,0 +1,57 @@
+# Embargo desk — the standing rooms, as a Switch room-group template.
+#
+# Run this in Switch once the desk's agents are registered (the seed step, or
+# the agent containers, register embargo-intake / embargo-disclosure /
+# embargo-reproducer / embargo-fixer). It creates the two rooms the desk always
+# has: a public intake room where reports arrive, and a public advisories room
+# where published advisories land.
+#
+# The per-case rooms are NOT in this template on purpose: the intake agent
+# creates one for each accepted case, private, with the reproducer, a human
+# security-lead role and the reporter in it, and links it back to intake. That
+# is the part that must not be standing — a case room exists only while its
+# case does.
+version: 1
+
+params:
+  bridge:
+    type: bridge
+    description: Where the rooms are mirrored (Mattermost, Slack, Discord, ...).
+    default: [$first]
+
+group:
+  name: "Embargo desk"
+  description: "A security-report desk for people and agents: ground, triage, fix under embargo, disclose."
+
+rooms:
+  - name: "security-intake"
+    description: "Report a curl vulnerability here. Every report is grounded against curl's advisory record on arrival."
+    bridge: "{bridge}"
+    agents: ["embargo-intake"]
+    users: ["{$creator}"]
+    instructions: |
+      This is the public intake room. Post a vulnerability report and address
+      @embargo-intake. It grounds the claim against curl's own advisory data,
+      turns away what does not stand up with the reason, links duplicates, and
+      for anything that might be real opens a private case room and puts this
+      report under embargo. Nothing sensitive should be posted here — the desk
+      moves real cases into their own private rooms.
+    kickoff: |
+      @embargo-intake this is the intake room. Say in one line what you do with
+      a report and what you will not discuss in the open.
+
+  - name: "advisories"
+    description: "Published advisories. Nothing lands here before a human sign-off and the end of the embargo."
+    bridge: "{bridge}"
+    agents: ["embargo-disclosure"]
+    users: ["{$creator}"]
+    instructions: |
+      This is the public advisories room. @embargo-disclosure posts a finished
+      advisory here only after a human security lead has signed off in the case
+      room and the embargo has been lifted. If a case's material is still under
+      embargo, it cannot be posted here — the guard blocks it.
+
+links:
+  - from: "advisories"
+    to: "security-intake"
+    label: "intake"

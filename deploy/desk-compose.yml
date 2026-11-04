@@ -1,0 +1,55 @@
+# The Embargo desk: the guard and the three agents, beside a running Switch.
+#
+# Bring Switch up first (its own quickstart gives you a server, a bridge and an
+# admin). Then seed the desk once — it registers the agents and creates the
+# rooms, writing work/desk.env — and start this:
+#
+#   python scripts/seed_desk.py          # writes work/desk.env
+#   docker compose -f deploy/desk-compose.yml up
+#
+# The agents reach Switch on the host; on Linux, pass SWITCH_API explicitly or
+# run with --network host.
+services:
+  guard:
+    build: ../guard
+    ports:
+      - "19000:19000"
+    environment:
+      EMBARGO_ADMIN_KEY: ${EMBARGO_ADMIN_KEY:-devkey}
+
+  intake:
+    build:
+      context: ..
+      dockerfile: desk/Dockerfile
+    env_file: ../work/desk.env
+    environment:
+      DESK_AGENT: intake
+    volumes:
+      - ../work:/app/work
+    depends_on: [guard]
+
+  disclosure:
+    build:
+      context: ..
+      dockerfile: desk/Dockerfile
+    env_file: ../work/desk.env
+    environment:
+      DESK_AGENT: disclosure
+    volumes:
+      - ../work:/app/work
+    depends_on: [guard]
+
+  reproducer:
+    build:
+      context: ..
+      dockerfile: desk/Dockerfile
+    env_file: ../work/desk.env
+    environment:
+      DESK_AGENT: reproducer
+    volumes:
+      - ../work:/app/work
+      # The reproducer runs published curl images to probe a release; it needs
+      # a Docker socket. Omit this and the probe reports "docker not available"
+      # rather than failing the agent.
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on: [guard]
