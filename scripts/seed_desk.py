@@ -58,9 +58,18 @@ def make_room(c: httpx.Client, **body) -> dict:
     return r.json()
 
 
+def open_addressing(c: httpx.Client, ids: dict[str, str]) -> None:
+    """A security desk takes reports from anyone, so the agents are open to
+    everyone in their rooms rather than to their owner alone."""
+    for name, aid in ids.items():
+        r = c.put(f"{GATEWAY}/agents/{aid}/addressing-policy", json={"policy": None})
+        print(f"addressing open for {name}: {r.status_code}")
+
+
 def main() -> None:
-    register_all()
+    ids = register_all()
     c = gw()
+    open_addressing(c, ids)
     intake = make_room(
         c,
         name="security-intake",
