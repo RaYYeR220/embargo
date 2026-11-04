@@ -1,0 +1,44 @@
+# local env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# working notes (never published)
+BRIEF.md
+SHIP-STATE.md
+ALTERNATIVES.md
+submission*.md
+.remember/
+MEMORY.md
+superpowers/
+docs/superpowers/
+.agents/
+.claude/
+*-internal/
+*-backup*
+*.bundle
+scratch/
+notes/
+
+# design prototypes
+ui-prototypes/
+mockups/
+design-ref/
+variants/
+
+# build + runtime
+node_modules/
+dist/
+build/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+coverage/
+bench/runs/*/raw/
+work/
+*.log
+bench/cache/

@@ -1,0 +1,4155 @@
+{
+  "source": {
+    "real": "https://curl.se/docs/vuln.json",
+    "rejected": "https://gist.github.com/bagder/07f7581f6e3d78ef37dfbfc81fd1d1cd"
+  },
+  "min_year": 2024,
+  "counts": {
+    "real": 89,
+    "rejected": 49,
+    "total": 138
+  },
+  "entries": [
+    {
+      "id": "4099618",
+      "url": "https://hackerone.com/reports/4099618",
+      "title": "local interface connection reuse mixup",
+      "truth": "real",
+      "cve": "CVE-2026-107929",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.9.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "3060557af702dd59155ea703a0790455c2f49a59",
+            "fixed": "d37d79df1e01066417aff0a9e6bc675edad3edba"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0",
+        "d37d79df1e01066417aff0a9e6bc675edad3edba"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-488",
+      "cwe_desc": "Exposure of Data Element to Wrong Session",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4099194",
+      "url": "https://hackerone.com/reports/4099194",
+      "title": "info leak uploading over WebSockets with GnuTLS",
+      "truth": "real",
+      "cve": "CVE-2026-107928",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.86.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "664249d095275ec532f55dd1752d80c8c1093a77",
+            "fixed": "64fb3e7a7b116f690966054f281624152d4a7651"
+          }
+        ]
+      },
+      "fixed_in": [
+        "64fb3e7a7b116f690966054f281624152d4a7651",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-126",
+      "cwe_desc": "Buffer Over-read",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4041053",
+      "url": "https://hackerone.com/reports/4041053",
+      "title": "password leak in CURLINFO_EFFECTIVE_URL",
+      "truth": "real",
+      "cve": "CVE-2026-94266",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.62.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "46e164069d1a5230e4e64cbd2ff46c46cce056bb",
+            "fixed": "7a6bd027d0de2b6857472d35da090ef60cc29f19"
+          }
+        ]
+      },
+      "fixed_in": [
+        "7a6bd027d0de2b6857472d35da090ef60cc29f19",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-522",
+      "cwe_desc": "Insufficiently Protected Credentials",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4040551",
+      "url": "https://hackerone.com/reports/4040551",
+      "title": "Authorization: Negotiate sent to foreign origin",
+      "truth": "real",
+      "cve": "CVE-2026-94265",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "8f71d0fde515aa4c68002477356c35bd79927729",
+            "fixed": "557a52f21e37a626725a9e708c02af129c3ece1b"
+          }
+        ]
+      },
+      "fixed_in": [
+        "557a52f21e37a626725a9e708c02af129c3ece1b",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-200",
+      "cwe_desc": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4030333",
+      "url": "https://hackerone.com/reports/4030333",
+      "title": "HTTP/2 upload Use-After-Free",
+      "truth": "real",
+      "cve": "CVE-2026-92392",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.12.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "cd9107e0128191b7b5396b9eb81bbd20c2d36755",
+            "fixed": "8b0744af5b1b631da5b938ca31c3f9895ad5a321"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0",
+        "8b0744af5b1b631da5b938ca31c3f9895ad5a321"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-416",
+      "cwe_desc": "Use After Free",
+      "severity": "High",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4024222",
+      "url": "https://hackerone.com/reports/4024222",
+      "title": "curl_mime_free stack overflow by recursion",
+      "truth": "real",
+      "cve": "CVE-2026-92391",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.56.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "ce0881edee3c78609eae49665fb70264d8786d29",
+            "fixed": "d7546809d5bd548b69ec49fca26565c8f6f0d344"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0",
+        "d7546809d5bd548b69ec49fca26565c8f6f0d344"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-674",
+      "cwe_desc": "Uncontrolled Recursion",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4023192",
+      "url": "https://hackerone.com/reports/4023192",
+      "title": "-J no-clobber guarantee bypassed with 103 early hints",
+      "truth": "real",
+      "cve": "CVE-2026-92390",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.20.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "80675818e0417be8c991513b328c5507e93b47e5",
+            "fixed": "c24a69d8cd368de4e25e3540bf0b7b000a31d5a7"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0",
+        "c24a69d8cd368de4e25e3540bf0b7b000a31d5a7"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-73",
+      "cwe_desc": "External Control of File Name or Path",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4022568",
+      "url": "https://hackerone.com/reports/4022568",
+      "title": "TFTP direction confusion",
+      "truth": "real",
+      "cve": "CVE-2026-92389",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.15.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "56d9624b566ac15ffb4b4b6eef220a5000b767e0",
+            "fixed": "63dd390fab905a239a97e2700532929343ebc4e9"
+          }
+        ]
+      },
+      "fixed_in": [
+        "63dd390fab905a239a97e2700532929343ebc4e9",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-200",
+      "cwe_desc": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4022070",
+      "url": "https://hackerone.com/reports/4022070",
+      "title": "FTP wildcard write callback mixup",
+      "truth": "real",
+      "cve": "CVE-2026-92388",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.21.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "0825cd80a62c21725fb3615f1fdd3aa6cc5f0f34",
+            "fixed": "ba8f8a7f27a5c5e19e4ef212b90b35a93559163e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0",
+        "ba8f8a7f27a5c5e19e4ef212b90b35a93559163e"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-416",
+      "cwe_desc": "Use After Free",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4022003",
+      "url": "https://hackerone.com/reports/4022003",
+      "title": "never-ending loop via server response omission",
+      "truth": "real",
+      "cve": "CVE-2026-92387",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.10.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "a5598b6fcb9ec6b57a7770939a0ffb004456f333",
+            "fixed": "753735af87f5c30cb6f60a70342f8bc4bc5fd5db"
+          }
+        ]
+      },
+      "fixed_in": [
+        "753735af87f5c30cb6f60a70342f8bc4bc5fd5db",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-835",
+      "cwe_desc": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "4021979",
+      "url": "https://hackerone.com/reports/4021979",
+      "title": "server-set cookie aborts cookie jar load",
+      "truth": "real",
+      "cve": "CVE-2026-92386",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.7.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "142ac257b3242459b284020c59f1902b9687a954",
+            "fixed": "445aa87e13f91c94bc742f54343a2eac924e1765"
+          }
+        ]
+      },
+      "fixed_in": [
+        "445aa87e13f91c94bc742f54343a2eac924e1765",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-1284",
+      "cwe_desc": "Improper Validation of Specified Quantity in Input",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3993870",
+      "url": "https://hackerone.com/reports/3993870",
+      "title": "auto client cert connection reuse mixup",
+      "truth": "real",
+      "cve": "CVE-2026-86415",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "d69bfad3fa3daf5e72331f6870667607828d5891",
+            "fixed": "00271cfcb95b6481a1f91ce0a0dad5d64d2e89a9"
+          }
+        ]
+      },
+      "fixed_in": [
+        "00271cfcb95b6481a1f91ce0a0dad5d64d2e89a9",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3993566",
+      "url": "https://hackerone.com/reports/3993566",
+      "title": "leaking host credentials to HTTP proxy",
+      "truth": "real",
+      "cve": "CVE-2026-86414",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.10.8",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "52ceab5e41a01b4d1227876d51a3680a3ce5a841",
+            "fixed": "2956af6c7451029fb12c12f8166dff211f930d52"
+          }
+        ]
+      },
+      "fixed_in": [
+        "2956af6c7451029fb12c12f8166dff211f930d52",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3993549",
+      "url": "https://hackerone.com/reports/3993549",
+      "title": "Negotiate credentials sent to redirected origin",
+      "truth": "real",
+      "cve": "CVE-2026-86413",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "8f71d0fde515aa4c68002477356c35bd79927729",
+            "fixed": "43029e2ec37eba2354ced199ccd8898de695858e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "43029e2ec37eba2354ced199ccd8898de695858e",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3989514",
+      "url": "https://hackerone.com/reports/3989514",
+      "title": "wolfSSL public-key pinning bypass",
+      "truth": "real",
+      "cve": "CVE-2026-87866",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.43.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "0675abbc7572ff6d711a1f325d9b812f98bce78f",
+            "fixed": "ed131747c1a3dc7f816d26724c44537ac8acba44"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0",
+        "ed131747c1a3dc7f816d26724c44537ac8acba44"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3975408",
+      "url": "https://hackerone.com/reports/3975408",
+      "title": "knownhost callback mismatches key as missing",
+      "truth": "real",
+      "cve": "CVE-2026-87865",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.69.1",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "e96fe70cabcb3a5a009821dbb453dc0160ddc3f5",
+            "fixed": "323c184b6bdf5b1988a10c0a61560666e1588149"
+          }
+        ]
+      },
+      "fixed_in": [
+        "323c184b6bdf5b1988a10c0a61560666e1588149",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3973201",
+      "url": "https://hackerone.com/reports/3973201",
+      "title": "server-set cookie erases cookie jar",
+      "truth": "real",
+      "cve": "CVE-2026-86412",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.18.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "3f0629ca443825916cbc0795bcd5f241fbf7104c",
+            "fixed": "6ded3e594455d6f018fab5f2f5d916eb9bc4ef94"
+          }
+        ]
+      },
+      "fixed_in": [
+        "6ded3e594455d6f018fab5f2f5d916eb9bc4ef94",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-754",
+      "cwe_desc": "Improper Check for Unusual or Exceptional Conditions",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3973190",
+      "url": "https://hackerone.com/reports/3973190",
+      "title": "FTP connection reuse inherits client-certificate",
+      "truth": "real",
+      "cve": "CVE-2026-86411",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "4ff212f8ed328fb95261e11add8f4d2f0616895a",
+            "fixed": "72352daba01ba8072b6c1c0254cb77860ed1ab06"
+          }
+        ]
+      },
+      "fixed_in": [
+        "72352daba01ba8072b6c1c0254cb77860ed1ab06",
+        "8.22.0"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-488",
+      "cwe_desc": "Exposure of Data Element to Wrong Session",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3973176",
+      "url": "https://hackerone.com/reports/3973176",
+      "title": "redirect to SFTP or SCP bypasses host verification",
+      "truth": "real",
+      "cve": "CVE-2026-86410",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.81.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-297",
+      "cwe_desc": "Improper Validation of Certificate with Host Mismatch",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3973135",
+      "url": "https://hackerone.com/reports/3973135",
+      "title": "stale SigV4 headers sent unintended",
+      "truth": "real",
+      "cve": "CVE-2026-86409",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.75.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "08e8455dddc5e48e58a12ade3815c01ae3da3b64",
+            "fixed": "c3c70440e8d9938c0bb732595751e8aebc614f24"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.22.0",
+        "c3c70440e8d9938c0bb732595751e8aebc614f24"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3972403",
+      "url": "https://hackerone.com/reports/3972403",
+      "title": "IMAP APPEND plus CRLF conversion command injection",
+      "truth": "real",
+      "cve": "CVE-2026-87864",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.30.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "f8c8c76d39ac2fa825481ba42ab2247cd122f963",
+            "fixed": "3b547de301342b347fb3c6ea6ae7979070793a66"
+          }
+        ]
+      },
+      "fixed_in": [
+        "3b547de301342b347fb3c6ea6ae7979070793a66",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.22.0"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-130",
+      "cwe_desc": "Improper Handling of Length Parameter Inconsistency",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3972373",
+      "url": "https://hackerone.com/reports/3972373",
+      "title": "HSTS response erases persisted entries",
+      "truth": "real",
+      "cve": "CVE-2026-87863",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.2.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "0c667188e0c6cda615a036b8a2b4125f2c404dde",
+            "fixed": "08d50a791b3197a3d0a4fc2f778e243f5501c67e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "08d50a791b3197a3d0a4fc2f778e243f5501c67e",
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3972357",
+      "url": "https://hackerone.com/reports/3972357",
+      "title": "HSTS cache import drops longer-lived child",
+      "truth": "real",
+      "cve": "CVE-2026-87862",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.11.0",
+            "fixed": "8.14.3"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.2"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.2"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "a94973805df96269bf3f3bf0a20ccb9887313316",
+            "fixed": "a1614c3bcf1593eb524b37792124357d97a5429c"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.3",
+        "8.16.2",
+        "8.20.2",
+        "8.23.0",
+        "a1614c3bcf1593eb524b37792124357d97a5429c"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3972094",
+      "url": "https://hackerone.com/reports/3972094",
+      "title": "cross-origin reuse of a Negotiate connection",
+      "truth": "real",
+      "cve": "CVE-2026-87861",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.23.0"
+          },
+          {
+            "introduced": "bd10924b47c8bf94127eaee8c56e7b5e5418da46",
+            "fixed": "7c11f1a1bd53e2cd983fe153e45991302d097647"
+          }
+        ]
+      },
+      "fixed_in": [
+        "7c11f1a1bd53e2cd983fe153e45991302d097647",
+        "8.23.0"
+      ],
+      "last_affected": "8.22.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3973090",
+      "url": "https://hackerone.com/reports/3973090",
+      "title": "wolfSSL CA-cache hit overrides callback",
+      "truth": "real",
+      "cve": "CVE-2026-82208",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.9.1",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "0f2876b2c33f6784a27b6f7345bd8cd95b46352a",
+            "fixed": "ed0338befd1d865a8ea1fbaa90013a096dedd07a"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0",
+        "ed0338befd1d865a8ea1fbaa90013a096dedd07a"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3972385",
+      "url": "https://hackerone.com/reports/3972385",
+      "title": "domain-scoped PSL domain cookie",
+      "truth": "real",
+      "cve": "CVE-2026-82209",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.46.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "e77b5b7453c1e8ccd7ec0816890d98e2f392e465",
+            "fixed": "95c1e8915dce64606bd753fd47fc0bd236e31cd6"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0",
+        "95c1e8915dce64606bd753fd47fc0bd236e31cd6"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3972395",
+      "url": "https://hackerone.com/reports/3972395",
+      "title": "secure cookie attribute bypass with tab",
+      "truth": "real",
+      "cve": "CVE-2026-80255",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.13.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "1aea05a6c2699e80c75936d58569851555acd603",
+            "fixed": "4f6aa41a0145e930e766775dbe860883d350aa0a"
+          }
+        ]
+      },
+      "fixed_in": [
+        "4f6aa41a0145e930e766775dbe860883d350aa0a",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3969368",
+      "url": "https://hackerone.com/reports/3969368",
+      "title": "native CA store conn reuse",
+      "truth": "real",
+      "cve": "CVE-2026-80231",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.71.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "148534db57dda611cf8516e92e4d6e35fc1e5074",
+            "fixed": "7be1e70cb6bcd83e130ecfe8cb91b6a7dcdeff42"
+          }
+        ]
+      },
+      "fixed_in": [
+        "7be1e70cb6bcd83e130ecfe8cb91b6a7dcdeff42",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-488",
+      "cwe_desc": "Exposure of Data Element to Wrong Session",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3969300",
+      "url": "https://hackerone.com/reports/3969300",
+      "title": "OpenSSL pinning bypass",
+      "truth": "real",
+      "cve": "CVE-2026-80230",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.45.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "8363656cb4e0c60a11d8531ead0ec43120b50591",
+            "fixed": "5267ed859d545534d0c21675a2b70af5a3b6e3ef"
+          }
+        ]
+      },
+      "fixed_in": [
+        "5267ed859d545534d0c21675a2b70af5a3b6e3ef",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3969255",
+      "url": "https://hackerone.com/reports/3969255",
+      "title": "OpenSSL provider use-after-free",
+      "truth": "real",
+      "cve": "CVE-2026-80229",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.14.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "f2ce6c46b9dcc46ced0ce43fa95176ea7599a854",
+            "fixed": "7ea37abc6ac0120ba5f6d94be8d196f7cf1506bb"
+          }
+        ]
+      },
+      "fixed_in": [
+        "7ea37abc6ac0120ba5f6d94be8d196f7cf1506bb",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-416",
+      "cwe_desc": "Use After Free",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3923520",
+      "url": "https://hackerone.com/reports/3923520",
+      "title": "Negotiate ambient user conn reuse",
+      "truth": "real",
+      "cve": "CVE-2026-19931",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.64.1",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "6c6035532383e300c712e4c1cd9fdd749ed5cf59",
+            "fixed": "7103a93b05bc69ea98ed9d05d02fa9eeba533f2f"
+          }
+        ]
+      },
+      "fixed_in": [
+        "7103a93b05bc69ea98ed9d05d02fa9eeba533f2f",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-488",
+      "cwe_desc": "Exposure of Data Element to Wrong Session",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3916059",
+      "url": "https://hackerone.com/reports/3916059",
+      "title": "HTTP/2 server push UAF",
+      "truth": "real",
+      "cve": "CVE-2026-18924",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.44.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "ea7134ac874a66107e54ff93657ac565cf2ec4aa",
+            "fixed": "90325ff0444cbdff368bda5d26d6405a0bb6ee43"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0",
+        "90325ff0444cbdff368bda5d26d6405a0bb6ee43"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-416",
+      "cwe_desc": "Use After Free",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3822248",
+      "url": "https://hackerone.com/reports/3822248",
+      "title": "OpenLDAP SASL authentication bypass",
+      "truth": "real",
+      "cve": "CVE-2026-13608",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.82.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.22.0"
+          },
+          {
+            "introduced": "eeca818b1e8d1e61c2d4d833aed56ce4c510a9d4",
+            "fixed": "ea71c3b6b60e563651ea8596a975aef0c8199519"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.22.0",
+        "ea71c3b6b60e563651ea8596a975aef0c8199519"
+      ],
+      "last_affected": "8.21.0",
+      "cwe": "CWE-923",
+      "cwe_desc": "Improper Restriction of Communication Channel to Intended Endpoints",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3797526",
+      "url": "https://hackerone.com/reports/3797526",
+      "title": "proto-default skips SSH verification",
+      "truth": "real",
+      "cve": "CVE-2026-12064",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.81.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "18270893abdb19f0ca170c118f8a2847dbd304be",
+            "fixed": "ab3bb8cd8be8f9d4acb97da0418abc279182041e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0",
+        "ab3bb8cd8be8f9d4acb97da0418abc279182041e"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-297",
+      "cwe_desc": "Improper Validation of Certificate with Host Mismatch",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3793260",
+      "url": "https://hackerone.com/reports/3793260",
+      "title": "cross-origin Digest auth state leak",
+      "truth": "real",
+      "cve": "CVE-2026-11856",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.10.6",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "334d78cd18a7310144383929bdcef34ffbf6159b",
+            "fixed": "5c6b4880357ab3e72967c1c45cae0f96ffabc535"
+          }
+        ]
+      },
+      "fixed_in": [
+        "5c6b4880357ab3e72967c1c45cae0f96ffabc535",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-294",
+      "cwe_desc": "Authentication Bypass by Capture-replay",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3788931",
+      "url": "https://hackerone.com/reports/3788931",
+      "title": "WS Auto-PONG memory exhaustion",
+      "truth": "real",
+      "cve": "CVE-2026-11586",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.16.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "0b091328773c64e23f5c4739da74527093c6a5ab",
+            "fixed": "849317ff5c5a5e13f50ec3d001e46ddffa77d8a4"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.16.1",
+        "8.20.1",
+        "8.21.0",
+        "849317ff5c5a5e13f50ec3d001e46ddffa77d8a4"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-770",
+      "cwe_desc": "Allocation of Resources Without Limits or Throttling",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3788984",
+      "url": "https://hackerone.com/reports/3788984",
+      "title": "Native CA trust persist",
+      "truth": "real",
+      "cve": "CVE-2026-11564",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "eefd03c572996e5de4dec4fe295ad6f103e0eefc",
+            "fixed": "d69bfad3fa3daf5e72331f6870667607828d5891"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.20.1",
+        "8.21.0",
+        "d69bfad3fa3daf5e72331f6870667607828d5891"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3783438",
+      "url": "https://hackerone.com/reports/3783438",
+      "title": "QUIC zero-length UDP datagrams busy-loop",
+      "truth": "real",
+      "cve": "CVE-2026-11352",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.18.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "6a3d0b6d631d5e9bec797306b5b41a9f440a088d",
+            "fixed": "56eca2afb4806f1032872fa97d1834b3c1385276"
+          }
+        ]
+      },
+      "fixed_in": [
+        "56eca2afb4806f1032872fa97d1834b3c1385276",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-835",
+      "cwe_desc": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3754343",
+      "url": "https://hackerone.com/reports/3754343",
+      "title": "sending old referer",
+      "truth": "real",
+      "cve": "CVE-2026-9546",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.18.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "2cb868242dc2ac9cd52ee64987ef51d5964a56f9",
+            "fixed": "862e8a74a84478d82973471b4f49dc2746c1780e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.20.1",
+        "8.21.0",
+        "862e8a74a84478d82973471b4f49dc2746c1780e"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-200",
+      "cwe_desc": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3751697",
+      "url": "https://hackerone.com/reports/3751697",
+      "title": "HTTP/2 stream-dependency tree UAF",
+      "truth": "real",
+      "cve": "CVE-2026-10536",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.88.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "71b7e0161032927cdfb4e75ea40f65b8898b3956",
+            "fixed": "bfbff7852f050232edd3e5ca5c6bf2021c340f5a"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0",
+        "bfbff7852f050232edd3e5ca5c6bf2021c340f5a"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-416",
+      "cwe_desc": "Use After Free",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3751712",
+      "url": "https://hackerone.com/reports/3751712",
+      "title": "SSH improper host validation",
+      "truth": "real",
+      "cve": "CVE-2026-9547",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.69.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "507cf6a13db0375eadd4655b4c64710db29e9cf2",
+            "fixed": "0b8dbbc63c98777e4584cb9fbd71df3464008ad1"
+          }
+        ]
+      },
+      "fixed_in": [
+        "0b8dbbc63c98777e4584cb9fbd71df3464008ad1",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-297",
+      "cwe_desc": "Improper Validation of Certificate with Host Mismatch",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3750295",
+      "url": "https://hackerone.com/reports/3750295",
+      "title": "stale proxy password leak",
+      "truth": "real",
+      "cve": "CVE-2026-9079",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.8.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "d5e83eb745762f48d8fafadc5df5dd3ae8d8941e",
+            "fixed": "88c7e16cceec816a2df45c899d49b1e85513f193"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0",
+        "88c7e16cceec816a2df45c899d49b1e85513f193"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-522",
+      "cwe_desc": "Insufficiently Protected Credentials",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3752888",
+      "url": "https://hackerone.com/reports/3752888",
+      "title": "exposing HTTP/3 early data",
+      "truth": "real",
+      "cve": "CVE-2026-9545",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.11.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "962097b8dd44ed5b9e7984bc1cdffdbdd566857f",
+            "fixed": "7b9613fa9b1a5e04301a3920eef58e8138dad05e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "7b9613fa9b1a5e04301a3920eef58e8138dad05e",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-200",
+      "cwe_desc": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3749204",
+      "url": "https://hackerone.com/reports/3749204",
+      "title": "UAF after pause in socket callback",
+      "truth": "real",
+      "cve": "CVE-2026-9080",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.13.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "cfc657a48dbafb4194676d4c9d841388b3a22210",
+            "fixed": "5ab34cba42e4ee4282fe8bab43f311d51b9bf9bd"
+          }
+        ]
+      },
+      "fixed_in": [
+        "5ab34cba42e4ee4282fe8bab43f311d51b9bf9bd",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-416",
+      "cwe_desc": "Use After Free",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3744543",
+      "url": "https://hackerone.com/reports/3744543",
+      "title": "env-set cross-proxy Digest auth state leak",
+      "truth": "real",
+      "cve": "CVE-2026-8927",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.12.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "fc6eff13b5414caf6edf22d73a3239e074a04216",
+            "fixed": "5c225384b8d52c67ce8259c6e4203bc57aacb567"
+          }
+        ]
+      },
+      "fixed_in": [
+        "5c225384b8d52c67ce8259c6e4203bc57aacb567",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-294",
+      "cwe_desc": "Authentication Bypass by Capture-replay",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3735184",
+      "url": "https://hackerone.com/reports/3735184",
+      "title": "password leak with netrc and user in URL",
+      "truth": "real",
+      "cve": "CVE-2026-8926",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.11.1",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "e9b9bbac22c26cf67316fa8e6c6b9e831af31949",
+            "fixed": "4ae1d7cc2643e4773a136395f12bc02fc6867854"
+          }
+        ]
+      },
+      "fixed_in": [
+        "4ae1d7cc2643e4773a136395f12bc02fc6867854",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-522",
+      "cwe_desc": "Insufficiently Protected Credentials",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3735193",
+      "url": "https://hackerone.com/reports/3735193",
+      "title": "SASL double-free",
+      "truth": "real",
+      "cve": "CVE-2026-8925",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "ab650379a8c25ca952f651476d25b4cdd77bb3fc",
+            "fixed": "3da249e1f0716c06644ed3522a37a8bf81808012"
+          }
+        ]
+      },
+      "fixed_in": [
+        "3da249e1f0716c06644ed3522a37a8bf81808012",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-415",
+      "cwe_desc": "Double Free",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3733910",
+      "url": "https://hackerone.com/reports/3733910",
+      "title": "incomplete mTLS config matching in conn reuse",
+      "truth": "real",
+      "cve": "CVE-2026-8932",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.7",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "a1d6ad26100bc493c7b04f1301b1634b7f5aa8b4",
+            "fixed": "7541ae569d82fb308a5e2d94916027da4fa3ba3e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "7541ae569d82fb308a5e2d94916027da4fa3ba3e",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-305",
+      "cwe_desc": "Authentication Bypass by Primary Weakness",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3733905",
+      "url": "https://hackerone.com/reports/3733905",
+      "title": "trailing dot domain super cookie",
+      "truth": "real",
+      "cve": "CVE-2026-8924",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.46.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "e77b5b7453c1e8ccd7ec0816890d98e2f392e465",
+            "fixed": "51beed175dbfc37da3113f6acce60c630c070ce8"
+          }
+        ]
+      },
+      "fixed_in": [
+        "51beed175dbfc37da3113f6acce60c630c070ce8",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-201",
+      "cwe_desc": "Information Exposure Through Sent Data",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3721183",
+      "url": "https://hackerone.com/reports/3721183",
+      "title": "wrong reuse for different services",
+      "truth": "real",
+      "cve": "CVE-2026-8458",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.43.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "97c272e5d173ad5f706443e2477f0a84f0044edd",
+            "fixed": "5e99b73cf441d9c369768b9cd48b5389b9a2503d"
+          }
+        ]
+      },
+      "fixed_in": [
+        "5e99b73cf441d9c369768b9cd48b5389b9a2503d",
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-488",
+      "cwe_desc": "Exposure of Data Element to Wrong Session",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3718195",
+      "url": "https://hackerone.com/reports/3718195",
+      "title": "wrong STARTTLS connection reuse",
+      "truth": "real",
+      "cve": "CVE-2026-8286",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.30.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.1"
+          },
+          {
+            "introduced": "8.21.0",
+            "fixed": "8.21.0"
+          },
+          {
+            "introduced": "a1701eea289fe7ea80651f801cf992838a491dde",
+            "fixed": "a86efdd7ca5433de9231e650f18247de8319ad16"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.1",
+        "8.21.0",
+        "a86efdd7ca5433de9231e650f18247de8319ad16"
+      ],
+      "last_affected": "8.20.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3697719",
+      "url": "https://hackerone.com/reports/3697719",
+      "title": "cross-proxy Digest auth state leak",
+      "truth": "real",
+      "cve": "CVE-2026-7168",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.12.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "fc6eff13b5414caf6edf22d73a3239e074a04216",
+            "fixed": "c1cfdf59acbaf9504c4578d4cf56cdd7c8594507"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.0",
+        "c1cfdf59acbaf9504c4578d4cf56cdd7c8594507"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-294",
+      "cwe_desc": "Authentication Bypass by Capture-replay",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3694390",
+      "url": "https://hackerone.com/reports/3694390",
+      "title": "OCSP stapling bypass with Apple SecTrust",
+      "truth": "real",
+      "cve": "CVE-2026-7009",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "eefd03c572996e5de4dec4fe295ad6f103e0eefc",
+            "fixed": "51905671e07f087e28e5741063646c379fe17d89"
+          }
+        ]
+      },
+      "fixed_in": [
+        "51905671e07f087e28e5741063646c379fe17d89",
+        "8.20.0"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3677759",
+      "url": "https://hackerone.com/reports/3677759",
+      "title": "netrc credential leak with reused proxy connection",
+      "truth": "real",
+      "cve": "CVE-2026-6429",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.14.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "01165e08e0d131b399fba2190f17af67e66f0888",
+            "fixed": "b4024bf808bd558026fdc6096e8457f199ace306"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.20.0",
+        "b4024bf808bd558026fdc6096e8457f199ace306"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-200",
+      "cwe_desc": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3671818",
+      "url": "https://hackerone.com/reports/3671818",
+      "title": "stale custom cookie host causes cookie leak",
+      "truth": "real",
+      "cve": "CVE-2026-6276",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.71.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "e15e51384a423be31318b3c9c7d612a1aae661fd",
+            "fixed": "3a19987a87f393d9394fe5acc7643f6c263c92db"
+          }
+        ]
+      },
+      "fixed_in": [
+        "3a19987a87f393d9394fe5acc7643f6c263c92db",
+        "8.14.2",
+        "8.16.1",
+        "8.20.0"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-346",
+      "cwe_desc": "Origin Validation Error",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3669637",
+      "url": "https://hackerone.com/reports/3669637",
+      "title": "proxy credentials leak over redirect-to proxy",
+      "truth": "real",
+      "cve": "CVE-2026-6253",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.14.1",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "3b60bb725913ce7339aefef0a14b12df4c24db60",
+            "fixed": "188c2f166a20fa97c2325b2da7d0e5cecc13725f"
+          }
+        ]
+      },
+      "fixed_in": [
+        "188c2f166a20fa97c2325b2da7d0e5cecc13725f",
+        "8.14.2",
+        "8.16.1",
+        "8.20.0"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-522",
+      "cwe_desc": "Insufficiently Protected Credentials",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3650689",
+      "url": "https://hackerone.com/reports/3650689",
+      "title": "wrong reuse of SMB connection",
+      "truth": "real",
+      "cve": "CVE-2026-5773",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.40.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "aec2e865f06669b9cb5d26cc1148d70bc418b163",
+            "fixed": "74a169575d6412dc0ff532acdf94de35a6c2a571"
+          }
+        ]
+      },
+      "fixed_in": [
+        "74a169575d6412dc0ff532acdf94de35a6c2a571",
+        "8.14.2",
+        "8.16.1",
+        "8.20.0"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-488",
+      "cwe_desc": "Exposure of Data Element to Wrong Session",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3642555",
+      "url": "https://hackerone.com/reports/3642555",
+      "title": "wrong reuse of HTTP Negotiate connection",
+      "truth": "real",
+      "cve": "CVE-2026-5545",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.10.6",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "e56ae1426cb7a0a4a427cf8d6099a821fdaae428",
+            "fixed": "33e43985b8f3b9e66691d06e70be0395849856cd"
+          }
+        ]
+      },
+      "fixed_in": [
+        "33e43985b8f3b9e66691d06e70be0395849856cd",
+        "8.14.2",
+        "8.16.1",
+        "8.20.0"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-305",
+      "cwe_desc": "Authentication Bypass by Primary Weakness",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3621851",
+      "url": "https://hackerone.com/reports/3621851",
+      "title": "connection reuse ignores TLS requirement",
+      "truth": "real",
+      "cve": "CVE-2026-4873",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.20.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.20.0"
+          },
+          {
+            "introduced": "ec3bb8f727405642a471b4b1b9eb0118fc003104",
+            "fixed": "507e7be573b0a76fca597b75ff7cb27a66e7d865"
+          }
+        ]
+      },
+      "fixed_in": [
+        "507e7be573b0a76fca597b75ff7cb27a66e7d865",
+        "8.14.2",
+        "8.16.1",
+        "8.20.0"
+      ],
+      "last_affected": "8.19.0",
+      "cwe": "CWE-319",
+      "cwe_desc": "Cleartext Transmission of Sensitive Information",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3591944",
+      "url": "https://hackerone.com/reports/3591944",
+      "title": "use after free in SMB connection reuse",
+      "truth": "real",
+      "cve": "CVE-2026-3805",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.13.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.19.0"
+          },
+          {
+            "introduced": "f4831daa9b2a97e8a2921d6b62cc4dfdd0d8646e",
+            "fixed": "e090be9f73a7a71459ef678c7cc4b1f75e3ea883"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.19.0",
+        "e090be9f73a7a71459ef678c7cc4b1f75e3ea883"
+      ],
+      "last_affected": "8.18.0",
+      "cwe": "CWE-416",
+      "cwe_desc": "Use After Free",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3584903",
+      "url": "https://hackerone.com/reports/3584903",
+      "title": "wrong proxy connection reuse with credentials",
+      "truth": "real",
+      "cve": "CVE-2026-3784",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.7",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.19.0"
+          },
+          {
+            "introduced": "a1d6ad26100bc493c7b04f1301b1634b7f5aa8b4",
+            "fixed": "5f13a7645e565c5c1a06f3ef86e97afb856fb364"
+          }
+        ]
+      },
+      "fixed_in": [
+        "5f13a7645e565c5c1a06f3ef86e97afb856fb364",
+        "8.14.2",
+        "8.16.1",
+        "8.19.0"
+      ],
+      "last_affected": "8.18.0",
+      "cwe": "CWE-305",
+      "cwe_desc": "Authentication Bypass by Primary Weakness",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3583983",
+      "url": "https://hackerone.com/reports/3583983",
+      "title": "token leak with redirect and netrc",
+      "truth": "real",
+      "cve": "CVE-2026-3783",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.33.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.19.0"
+          },
+          {
+            "introduced": "06c1bea72faabb6fad4b7ef818aafaa336c9a7aa",
+            "fixed": "e3d7401a32a46516c9e5ee877e613e62ed35bddc"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.19.0",
+        "e3d7401a32a46516c9e5ee877e613e62ed35bddc"
+      ],
+      "last_affected": "8.18.0",
+      "cwe": "CWE-522",
+      "cwe_desc": "Insufficiently Protected Credentials",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": null,
+      "url": "https://curl.se/docs/CVE-2026-1965.html",
+      "title": "bad reuse of HTTP Negotiate connection",
+      "truth": "real",
+      "cve": "CVE-2026-1965",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.10.6",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.19.0"
+          },
+          {
+            "introduced": "e56ae1426cb7a0a4a427cf8d6099a821fdaae428",
+            "fixed": "f1a39f221d57354990e3eeeddc3404aede2aff70"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.19.0",
+        "f1a39f221d57354990e3eeeddc3404aede2aff70"
+      ],
+      "last_affected": "8.18.0",
+      "cwe": "CWE-305",
+      "cwe_desc": "Authentication Bypass by Primary Weakness",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3480925",
+      "url": "https://hackerone.com/reports/3480925",
+      "title": "libssh key passphrase bypass without agent set",
+      "truth": "real",
+      "cve": "CVE-2025-15224",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.58.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.18.0"
+          },
+          {
+            "introduced": "c92d2e14cfb0db662f958effd2ac86f995cf1b5a",
+            "fixed": "16d5f2a5660c61cc27bd5f1c7f512391d1c927aa"
+          }
+        ]
+      },
+      "fixed_in": [
+        "16d5f2a5660c61cc27bd5f1c7f512391d1c927aa",
+        "8.14.2",
+        "8.16.1",
+        "8.18.0"
+      ],
+      "last_affected": "8.17.0",
+      "cwe": "CWE-287",
+      "cwe_desc": "Improper Authentication",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3477116",
+      "url": "https://hackerone.com/reports/3477116",
+      "title": "libssh global known_hosts override",
+      "truth": "real",
+      "cve": "CVE-2025-15079",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.58.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.18.0"
+          },
+          {
+            "introduced": "c92d2e14cfb0db662f958effd2ac86f995cf1b5a",
+            "fixed": "adca486c125d9a6d9565b9607a19dce803a8b479"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.18.0",
+        "adca486c125d9a6d9565b9607a19dce803a8b479"
+      ],
+      "last_affected": "8.17.0",
+      "cwe": "CWE-297",
+      "cwe_desc": "Improper Validation of Certificate with Host Mismatch",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": null,
+      "url": "https://curl.se/docs/CVE-2025-14819.html",
+      "title": "OpenSSL partial chain store policy bypass",
+      "truth": "real",
+      "cve": "CVE-2025-14819",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.87.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.18.0"
+          },
+          {
+            "introduced": "3c16697ebd796f799227be293e8689aec5f8190d",
+            "fixed": "cd046f6c93b39d673a58c18648d8906e954c4f5d"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.18.0",
+        "cd046f6c93b39d673a58c18648d8906e954c4f5d"
+      ],
+      "last_affected": "8.17.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3459417",
+      "url": "https://hackerone.com/reports/3459417",
+      "title": "bearer token leak on cross-protocol redirect",
+      "truth": "real",
+      "cve": "CVE-2025-14524",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.33.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.18.0"
+          },
+          {
+            "introduced": "06c1bea72faabb6fad4b7ef818aafaa336c9a7aa",
+            "fixed": "1a822275d333dc6da6043497160fd04c8fa48640"
+          }
+        ]
+      },
+      "fixed_in": [
+        "1a822275d333dc6da6043497160fd04c8fa48640",
+        "8.14.2",
+        "8.16.1",
+        "8.18.0"
+      ],
+      "last_affected": "8.17.0",
+      "cwe": "CWE-522",
+      "cwe_desc": "Insufficiently Protected Credentials",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": null,
+      "url": "https://curl.se/docs/CVE-2025-14017.html",
+      "title": "broken TLS options for threaded LDAPS",
+      "truth": "real",
+      "cve": "CVE-2025-14017",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.17.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.18.0"
+          },
+          {
+            "introduced": "ccba0d10b6baf5c73cae8cf4fb3f29f0f55c5a34",
+            "fixed": "39d1976b7f709a516e3243338ebc0443bdd8d56d"
+          }
+        ]
+      },
+      "fixed_in": [
+        "39d1976b7f709a516e3243338ebc0443bdd8d56d",
+        "8.14.2",
+        "8.16.1",
+        "8.18.0"
+      ],
+      "last_affected": "8.17.0",
+      "cwe": "CWE-567",
+      "cwe_desc": "Unsynchronized Access to Shared Data in a Multi-threaded Context",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": null,
+      "url": "https://curl.se/docs/CVE-2025-13034.html",
+      "title": "No QUIC certificate pinning with GnuTLS",
+      "truth": "real",
+      "cve": "CVE-2025-13034",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.8.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.18.0"
+          },
+          {
+            "introduced": "3210101088dfa3d6a125d213226b092f2f866722",
+            "fixed": "3d91ca8cdb3b434226e743946d428b4dd3acf2c9"
+          }
+        ]
+      },
+      "fixed_in": [
+        "3d91ca8cdb3b434226e743946d428b4dd3acf2c9",
+        "8.14.2",
+        "8.16.1",
+        "8.18.0"
+      ],
+      "last_affected": "8.17.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3355218",
+      "url": "https://hackerone.com/reports/3355218",
+      "title": "missing SFTP host verification with wolfSSH",
+      "truth": "real",
+      "cve": "CVE-2025-10966",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.69.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.1"
+          },
+          {
+            "introduced": "8.17.0",
+            "fixed": "8.17.0"
+          },
+          {
+            "introduced": "6773c7ca65cf2183295e56603f9b86a5ce816a06",
+            "fixed": "b011e3fcfb06d6c0278595ee2ee297036fbe9793"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.1",
+        "8.17.0",
+        "b011e3fcfb06d6c0278595ee2ee297036fbe9793"
+      ],
+      "last_affected": "8.16.0",
+      "cwe": "CWE-322",
+      "cwe_desc": "Key Exchange without Entity Authentication",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3330839",
+      "url": "https://hackerone.com/reports/3330839",
+      "title": "predictable WebSocket mask",
+      "truth": "real",
+      "cve": "CVE-2025-10148",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.11.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.0"
+          },
+          {
+            "introduced": "d78e129d50b2d190f1c1bde2ad1f62f02f152db0",
+            "fixed": "84db7a9eae8468c0445b15aa806fa7fa806fa0f2"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.0",
+        "84db7a9eae8468c0445b15aa806fa7fa806fa0f2"
+      ],
+      "last_affected": "8.15.0",
+      "cwe": "CWE-340",
+      "cwe_desc": "Generation of Predictable Numbers or Identifiers",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3294999",
+      "url": "https://hackerone.com/reports/3294999",
+      "title": "Out of bounds read for cookie path",
+      "truth": "real",
+      "cve": "CVE-2025-9086",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.13.0",
+            "fixed": "8.14.2"
+          },
+          {
+            "introduced": "8.15.0",
+            "fixed": "8.16.0"
+          },
+          {
+            "introduced": "1aea05a6c2699e80c75936d58569851555acd603",
+            "fixed": "c6ae07c6a541e0e96d0040afb62b45dd37711300"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.2",
+        "8.16.0",
+        "c6ae07c6a541e0e96d0040afb62b45dd37711300"
+      ],
+      "last_affected": "8.15.0",
+      "cwe": "CWE-125",
+      "cwe_desc": "Out-of-bounds Read",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3168039",
+      "url": "https://hackerone.com/reports/3168039",
+      "title": "WebSocket endless loop",
+      "truth": "real",
+      "cve": "CVE-2025-5399",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.13.0",
+            "fixed": "8.14.1"
+          },
+          {
+            "introduced": "3588df9478d7c27046b34cdb510728a26bedabc7",
+            "fixed": "d1145df24de8f80e6b167fbc4f28b86bcd0c6832"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.1",
+        "d1145df24de8f80e6b167fbc4f28b86bcd0c6832"
+      ],
+      "last_affected": "8.14.0",
+      "cwe": "CWE-835",
+      "cwe_desc": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3153497",
+      "url": "https://hackerone.com/reports/3153497",
+      "title": "No QUIC certificate pinning with wolfSSL",
+      "truth": "real",
+      "cve": "CVE-2025-5025",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.5.0",
+            "fixed": "8.14.0"
+          },
+          {
+            "introduced": "5f78cf503c786a1d48d13528dde038bccfa6c67c",
+            "fixed": "e1f65937a96a451292e9231339672797da86ecc5"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.0",
+        "e1f65937a96a451292e9231339672797da86ecc5"
+      ],
+      "last_affected": "8.13.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "3150884",
+      "url": "https://hackerone.com/reports/3150884",
+      "title": "QUIC certificate check skip with wolfSSL",
+      "truth": "real",
+      "cve": "CVE-2025-4947",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.8.0",
+            "fixed": "8.14.0"
+          },
+          {
+            "introduced": "4c46e277b2a0c0489de0e0fcb91f315c62f0369c",
+            "fixed": "a85f1df4803bbd272905c9e712537b41afeafbd3"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.14.0",
+        "a85f1df4803bbd272905c9e712537b41afeafbd3"
+      ],
+      "last_affected": "8.13.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2956023",
+      "url": "https://hackerone.com/reports/2956023",
+      "title": "gzip integer overflow",
+      "truth": "real",
+      "cve": "CVE-2025-0725",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.10.5",
+            "fixed": "8.12.0"
+          },
+          {
+            "introduced": "019c4088cfcca0d2b7c5cc4f52ca5dac0c616089",
+            "fixed": "76f83f0db23846e254d940ec7fe141010077eb88"
+          }
+        ]
+      },
+      "fixed_in": [
+        "76f83f0db23846e254d940ec7fe141010077eb88",
+        "8.12.0"
+      ],
+      "last_affected": "8.11.1",
+      "cwe": "CWE-680",
+      "cwe_desc": "Integer Overflow to Buffer Overflow",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2954286",
+      "url": "https://hackerone.com/reports/2954286",
+      "title": "eventfd double close",
+      "truth": "real",
+      "cve": "CVE-2025-0665",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.11.1",
+            "fixed": "8.12.0"
+          },
+          {
+            "introduced": "92124838c6b7e09e3f35ff84e1eb63cf0105c9b5",
+            "fixed": "ff5091aa9f73802e894b1cbdf24ab84e103200e2"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.12.0",
+        "ff5091aa9f73802e894b1cbdf24ab84e103200e2"
+      ],
+      "last_affected": "8.11.1",
+      "cwe": "CWE-1341",
+      "cwe_desc": "Multiple Releases of Same Resource or Handle",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2917232",
+      "url": "https://hackerone.com/reports/2917232",
+      "title": "netrc and default credential leak",
+      "truth": "real",
+      "cve": "CVE-2025-0167",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.76.0",
+            "fixed": "8.12.0"
+          },
+          {
+            "introduced": "46620b97431e19c53ce82e55055c85830f088cf4",
+            "fixed": "0e120c5b925e8ca75d5319e319e5ce4b8080d8eb"
+          }
+        ]
+      },
+      "fixed_in": [
+        "0e120c5b925e8ca75d5319e319e5ce4b8080d8eb",
+        "8.12.0"
+      ],
+      "last_affected": "8.11.1",
+      "cwe": "CWE-200",
+      "cwe_desc": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2829063",
+      "url": "https://hackerone.com/reports/2829063",
+      "title": "netrc and redirect credential leak",
+      "truth": "real",
+      "cve": "CVE-2024-11053",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.76.0",
+            "fixed": "8.11.1"
+          },
+          {
+            "introduced": "46620b97431e19c53ce82e55055c85830f088cf4",
+            "fixed": "e9b9bbac22c26cf67316fa8e6c6b9e831af31949"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.11.1",
+        "e9b9bbac22c26cf67316fa8e6c6b9e831af31949"
+      ],
+      "last_affected": "8.11.0",
+      "cwe": "CWE-200",
+      "cwe_desc": "Exposure of Sensitive Information to an Unauthorized Actor",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2764830",
+      "url": "https://hackerone.com/reports/2764830",
+      "title": "HSTS subdomain overwrites parent cache entry",
+      "truth": "real",
+      "cve": "CVE-2024-9681",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.74.0",
+            "fixed": "8.11.0"
+          },
+          {
+            "introduced": "7385610d0c74c6a254fea5e4cd6e1d559d848c8c",
+            "fixed": "a94973805df96269bf3f3bf0a20ccb9887313316"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.11.0",
+        "a94973805df96269bf3f3bf0a20ccb9887313316"
+      ],
+      "last_affected": "8.10.1",
+      "cwe": "CWE-1025",
+      "cwe_desc": "Comparison Using Wrong Factors",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2669852",
+      "url": "https://hackerone.com/reports/2669852",
+      "title": "OCSP stapling bypass with GnuTLS",
+      "truth": "real",
+      "cve": "CVE-2024-8096",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.41.0",
+            "fixed": "8.10.0"
+          },
+          {
+            "introduced": "f13669a375f5bfd14797bda91642cabe076974fa",
+            "fixed": "aeb1a281cab13c7ba791cb104e556b20e713941f"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.10.0",
+        "aeb1a281cab13c7ba791cb104e556b20e713941f"
+      ],
+      "last_affected": "8.9.1",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2629968",
+      "url": "https://hackerone.com/reports/2629968",
+      "title": "ASN.1 date parser overread",
+      "truth": "real",
+      "cve": "CVE-2024-7264",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.32.0",
+            "fixed": "8.9.1"
+          },
+          {
+            "introduced": "3a24cb7bc456366cbc3a03f7ab6d2576105a1f2d",
+            "fixed": "27959ecce75cdb2809c0bdb3286e60e08fadb519"
+          }
+        ]
+      },
+      "fixed_in": [
+        "27959ecce75cdb2809c0bdb3286e60e08fadb519",
+        "8.9.1"
+      ],
+      "last_affected": "8.9.0",
+      "cwe": "CWE-125",
+      "cwe_desc": "Out-of-bounds Read",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2604391",
+      "url": "https://hackerone.com/reports/2604391",
+      "title": "macidn punycode buffer overread",
+      "truth": "real",
+      "cve": "CVE-2024-6874",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.8.0",
+            "fixed": "8.9.0"
+          },
+          {
+            "introduced": "add22feeef07858307be5722e1869e082554290e",
+            "fixed": "686d54baf1df6e0775898f484d1670742898b3b2"
+          }
+        ]
+      },
+      "fixed_in": [
+        "686d54baf1df6e0775898f484d1670742898b3b2",
+        "8.9.0"
+      ],
+      "last_affected": "8.8.0",
+      "cwe": "CWE-126",
+      "cwe_desc": "Buffer Over-read",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2559516",
+      "url": "https://hackerone.com/reports/2559516",
+      "title": "freeing stack buffer in utf8asn1str",
+      "truth": "real",
+      "cve": "CVE-2024-6197",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.6.0",
+            "fixed": "8.9.0"
+          },
+          {
+            "introduced": "623c3a8fa0bdb2751f14b3741760d81910b7ec64",
+            "fixed": "3a537a4db9e65e545ec45b1b5d5575ee09a2569d"
+          }
+        ]
+      },
+      "fixed_in": [
+        "3a537a4db9e65e545ec45b1b5d5575ee09a2569d",
+        "8.9.0"
+      ],
+      "last_affected": "8.8.0",
+      "cwe": "CWE-590",
+      "cwe_desc": "Free of Memory not on the Heap",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2416725",
+      "url": "https://hackerone.com/reports/2416725",
+      "title": "TLS certificate check bypass with mbedTLS",
+      "truth": "real",
+      "cve": "CVE-2024-2466",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.5.0",
+            "fixed": "8.7.0"
+          },
+          {
+            "introduced": "fa714830e92cba7b16b9d3f2cc92a72ee9d821fa",
+            "fixed": "3d0fd382a29b95561b90b7ea3e7eb04dfdd43538"
+          }
+        ]
+      },
+      "fixed_in": [
+        "3d0fd382a29b95561b90b7ea3e7eb04dfdd43538",
+        "8.7.0"
+      ],
+      "last_affected": "8.6.0",
+      "cwe": "CWE-297",
+      "cwe_desc": "Improper Validation of Certificate with Host Mismatch",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2410774",
+      "url": "https://hackerone.com/reports/2410774",
+      "title": "QUIC certificate check bypass with wolfSSL",
+      "truth": "real",
+      "cve": "CVE-2024-2379",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.6.0",
+            "fixed": "8.7.0"
+          },
+          {
+            "introduced": "5d044ad9480a9f556f4b6a252d7533b1ba7fe57e",
+            "fixed": "aedbbdf18e689a5eee8dc39600914f5eda6c409c"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.7.0",
+        "aedbbdf18e689a5eee8dc39600914f5eda6c409c"
+      ],
+      "last_affected": "8.6.0",
+      "cwe": "CWE-295",
+      "cwe_desc": "Improper Certificate Validation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2402845",
+      "url": "https://hackerone.com/reports/2402845",
+      "title": "HTTP/2 push headers memory-leak",
+      "truth": "real",
+      "cve": "CVE-2024-2398",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.44.0",
+            "fixed": "8.7.0"
+          },
+          {
+            "introduced": "ea7134ac874a66107e54ff93657ac565cf2ec4aa",
+            "fixed": "deca8039991886a559b67bcd6701db800a5cf764"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.7.0",
+        "deca8039991886a559b67bcd6701db800a5cf764"
+      ],
+      "last_affected": "8.6.0",
+      "cwe": "CWE-772",
+      "cwe_desc": "Missing Release of Resource after Effective Lifetime",
+      "severity": "Medium",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2384833",
+      "url": "https://hackerone.com/reports/2384833",
+      "title": "Usage of disabled protocol",
+      "truth": "real",
+      "cve": "CVE-2024-2004",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "7.85.0",
+            "fixed": "8.7.0"
+          },
+          {
+            "introduced": "e6f8445edef8e7996d1cfb141d6df184efef972c",
+            "fixed": "17d302e56221f5040092db77d4f85086e8a20e0e"
+          }
+        ]
+      },
+      "fixed_in": [
+        "17d302e56221f5040092db77d4f85086e8a20e0e",
+        "8.7.0"
+      ],
+      "last_affected": "8.6.0",
+      "cwe": "CWE-115",
+      "cwe_desc": "Misinterpretation of Input",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2298922",
+      "url": "https://hackerone.com/reports/2298922",
+      "title": "OCSP verification bypass with TLS session reuse",
+      "truth": "real",
+      "cve": "CVE-2024-0853",
+      "affected": {
+        "ranges": [
+          {
+            "introduced": "8.5.0",
+            "fixed": "8.6.0"
+          },
+          {
+            "introduced": "395365ad2d9a6c3f1a35d5e268a6af2824129832",
+            "fixed": "c28e9478cb2548848eca9b765d0d409bfb18668c"
+          }
+        ]
+      },
+      "fixed_in": [
+        "8.6.0",
+        "c28e9478cb2548848eca9b765d0d409bfb18668c"
+      ],
+      "last_affected": "8.5.0",
+      "cwe": "CWE-299",
+      "cwe_desc": "Improper Check for Certificate Revocation",
+      "severity": "Low",
+      "disposition": "Resolved",
+      "why": "Confirmed curl CVE; the maintainer's OSV feed names this report as its origin."
+    },
+    {
+      "id": "2199174",
+      "url": "https://hackerone.com/reports/2199174",
+      "title": "[Critical] Curl CVE-2023-38545 vulnerability code changes are disclosed on the internet.",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2298307",
+      "url": "https://hackerone.com/reports/2298307",
+      "title": "Buffer Overflow Vulnerability in WebSocket Handling",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2819666",
+      "url": "https://hackerone.com/reports/2819666",
+      "title": "Exploitable Format String Vulnerability in curl_mfprintf Function",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2823554",
+      "url": "https://hackerone.com/reports/2823554",
+      "title": "Buffer overflow in strcpy",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2871792",
+      "url": "https://hackerone.com/reports/2871792",
+      "title": "Buffer Overflow Vulnerability in strcpy() Leading to Remote Code Execution",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2887487",
+      "url": "https://hackerone.com/reports/2887487",
+      "title": "Buffer Overflow Risk in Curl_inet_ntop and inet_ntop4",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2905552",
+      "url": "https://hackerone.com/reports/2905552",
+      "title": "bypass of this Fixed #2437131 [ Inadequate Protocol Restriction Enforcement in curl ]",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2912277",
+      "url": "https://hackerone.com/reports/2912277",
+      "title": "Hackers Attack Curl Vulnerability Accessing Sensitive Information",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "2981245",
+      "url": "https://hackerone.com/reports/2981245",
+      "title": "(\"possible\") UAF",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3100073",
+      "url": "https://hackerone.com/reports/3100073",
+      "title": "Path Traversal Vulnerability in curl via Unsanitized IPFS_PATH Environment Variable",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3101127",
+      "url": "https://hackerone.com/reports/3101127",
+      "title": "Buffer Overflow in curl MQTT Test Server (tests/server/mqttd.c) via Malicious CONNECT Packet",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3116935",
+      "url": "https://hackerone.com/reports/3116935",
+      "title": "Use of a Broken or Risky Cryptographic Algorithm (CWE-327) in libcurl",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3117697",
+      "url": "https://hackerone.com/reports/3117697",
+      "title": "Double Free Vulnerability in `libcurl` Cookie Management (`cookie.c`)",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3125820",
+      "url": "https://hackerone.com/reports/3125820",
+      "title": "HTTP/2 CONTINUATION Flood Vulnerability",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3125832",
+      "url": "https://hackerone.com/reports/3125832",
+      "title": "HTTP/3 Stream Dependency Cycle Exploit",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3137657",
+      "url": "https://hackerone.com/reports/3137657",
+      "title": "Memory Leak",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3158093",
+      "url": "https://hackerone.com/reports/3158093",
+      "title": "Memory Leak in libcurl via Location Header Handling (CWE-770)",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3230082",
+      "url": "https://hackerone.com/reports/3230082",
+      "title": "Stack-based Buffer Overflow in TELNET NEW_ENV Option Handling",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3231321",
+      "url": "https://hackerone.com/reports/3231321",
+      "title": "HTTP Proxy Bypass via `CURLOPT_CUSTOMREQUEST` Verb Tunneling",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3242005",
+      "url": "https://hackerone.com/reports/3242005",
+      "title": "Use-After-Free in OpenSSL Keylog Callback via SSL_get_ex_data() in libcurl",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3249936",
+      "url": "https://hackerone.com/reports/3249936",
+      "title": "HTTP Request Smuggling Vulnerability Analysis - cURL Security Report",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3250490",
+      "url": "https://hackerone.com/reports/3250490",
+      "title": "Disk Space Exhaustion leading to a Denial of Service (DoS)",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3272982",
+      "url": "https://hackerone.com/reports/3272982",
+      "title": "Vulnerability Report: Public Exposure of Security Audit File",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3293884",
+      "url": "https://hackerone.com/reports/3293884",
+      "title": "Vulnerability Report: Local File Disclosure via file:// Protocol in cURL",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3295650",
+      "url": "https://hackerone.com/reports/3295650",
+      "title": "Exposure of Hard-coded Private Keys and Credentials in curl Source Repository (CWE-321)",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3335085",
+      "url": "https://hackerone.com/reports/3335085",
+      "title": "TOCTOU Race Condition in HTTP/2 Connection Reuse Leads to Certificate Validation Bypass",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3340109",
+      "url": "https://hackerone.com/reports/3340109",
+      "title": "Stack Buffer Overflow in cURL Cookie Parsing Leads to RCE",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3346118",
+      "url": "https://hackerone.com/reports/3346118",
+      "title": "Timing Attack Vulnerability in curl Digest Authentication via Non-Constant-Time String Comparison",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3392174",
+      "url": "https://hackerone.com/reports/3392174",
+      "title": "Buffer Overflow in WebSocket Handshake (lib/ws.c:1287)",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3395218",
+      "url": "https://hackerone.com/reports/3395218",
+      "title": "Use of Deprecated strcpy() with Fixed-Size Buffers in Progress Time Formatting",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3395227",
+      "url": "https://hackerone.com/reports/3395227",
+      "title": "Use of Deprecated strcpy() with User-Controlled Environment Variable in Memory Debug Initialization",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3399774",
+      "url": "https://hackerone.com/reports/3399774",
+      "title": "Integer Overflow to Heap Overflow in DoH Response Handling",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3400831",
+      "url": "https://hackerone.com/reports/3400831",
+      "title": "CURLX_SET_BINMODE(NULL) can call fileno(NULL) and cause undefined behavior / crash",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3403880",
+      "url": "https://hackerone.com/reports/3403880",
+      "title": "Logical Flaw in curl_url_set Leads to Inconsistent Query Parameter Encoding",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3418528",
+      "url": "https://hackerone.com/reports/3418528",
+      "title": "Unsafe use of strcpy in Curl_ldap_err2string (packages/OS400/os400sys.c) \u2014 stack-buffer-overflow (PoC + ASan)",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3418646",
+      "url": "https://hackerone.com/reports/3418646",
+      "title": "Arbitrary Configuration File Inclusion: via External Control of File Name or Path",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3452725",
+      "url": "https://hackerone.com/reports/3452725",
+      "title": "Title: Use-After-Free in cURL Test Suite via Improper Cleanup of Global Handle",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3459636",
+      "url": "https://hackerone.com/reports/3459636",
+      "title": "Stack Buffer Overflow in cURL wolfSSL Backend (lib/vtls/wolfssl.c)",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3462525",
+      "url": "https://hackerone.com/reports/3462525",
+      "title": "Buffer Overflow in cURL Internal printf Function",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3465094",
+      "url": "https://hackerone.com/reports/3465094",
+      "title": "Path Traversal Bypass in file:// URLs Due to Incomplete URL-Encoded Path Normalization",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3466883",
+      "url": "https://hackerone.com/reports/3466883",
+      "title": "Curl Alt-Svc Parser Stack Buffer Overflow",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3466896",
+      "url": "https://hackerone.com/reports/3466896",
+      "title": "Heap Overflow in cURL AmigaOS Socket Implementation",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3468410",
+      "url": "https://hackerone.com/reports/3468410",
+      "title": "Heap buffer overflow in Curl_ipv4_resolve_r due to incorrect buffer alignment and size calculation on AmigaOS",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3470095",
+      "url": "https://hackerone.com/reports/3470095",
+      "title": "Heap Buffer Over-Read via Malicious SMB Server READ_ANDX Response",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3473182",
+      "url": "https://hackerone.com/reports/3473182",
+      "title": "A logic error in detect_proxy caused truncation of environment variable names for long protocol schemes.",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3506159",
+      "url": "https://hackerone.com/reports/3506159",
+      "title": "Heap Out-of-Bounds Read in lib/http2.c via Malformed PUSH_PROMISE Headers",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3514263",
+      "url": "https://hackerone.com/reports/3514263",
+      "title": "libcurl: Improper Authentication State Management on Cross-Protocol Redirects",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3516186",
+      "url": "https://hackerone.com/reports/3516186",
+      "title": "Cookie Max-Age Integer Overflow Vulnerability",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    },
+    {
+      "id": "3516202",
+      "url": "https://hackerone.com/reports/3516202",
+      "title": "Cookie Replacement Use-After-Free Vulnerability",
+      "truth": "rejected",
+      "cve": null,
+      "affected": null,
+      "fixed_in": null,
+      "last_affected": null,
+      "cwe": null,
+      "cwe_desc": null,
+      "severity": null,
+      "disposition": "Not Applicable / Informative / Spam",
+      "why": "Listed by the curl maintainer as a report submitted as a security vulnerability that was not one."
+    }
+  ]
+}
