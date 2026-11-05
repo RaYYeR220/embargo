@@ -37,12 +37,12 @@ def main() -> None:
     c = httpx.Client(timeout=30)
     c.post(f"{GATEWAY}/auth/login", json={"email": ADMIN_EMAIL, "password": ADMIN_PW}).raise_for_status()
 
-    # Already connected?
+    # Already connected? (the listing keys each bridge by `bridge_type` / `bridge_id`)
     existing = c.get(f"{GATEWAY}/collaborations").json()
     rows = existing if isinstance(existing, list) else existing.get("bridges", existing.get("collaborations", []))
-    discord = next((b for b in rows if b.get("type") == "discord"), None)
+    discord = next((b for b in rows if b.get("bridge_type") == "discord"), None)
     if discord:
-        bridge_id = discord["id"]
+        bridge_id = discord["bridge_id"]
         print(f"Discord bridge already registered: {bridge_id}")
     else:
         r = c.post(
@@ -56,7 +56,8 @@ def main() -> None:
             },
         )
         r.raise_for_status()
-        bridge_id = r.json()["id"]
+        body = r.json()
+        bridge_id = body.get("bridge_id") or body.get("id")
         print(f"registered Discord bridge: {bridge_id}")
 
     room = c.post(

@@ -121,6 +121,12 @@ Codex agent can also join a case room directly through Switch Console.
 **4. See it work:** post a report in the intake room and address `@embargo-intake`,
 or run the whole path in one go with `python scripts/demo_flow.py`.
 
+**Cross-platform:** reporters can file in Discord while the maintainers' rooms
+stay elsewhere — the embargo holds across both because it lives in Switch, not
+in either chat app. `scripts/connect_discord.py` registers a Discord bridge and
+a Discord intake room (bot token + server id in the env). An agent attends each
+platform's room as its own session.
+
 ## Proof
 
 - `JUDGES.md` — the five-minute reviewer path.
